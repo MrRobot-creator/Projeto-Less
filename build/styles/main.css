@@ -15,6 +15,22 @@ li {
   width: 100%;
   margin: 0 auto;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (max-width:767px) {
+  .container {
+    max-width: 70%;
+  }
+  .container .products {
+    display: block;
+  }
+  .container-item {
+    margin-bottom: 32px;
+  }
+}
 header {
   background-color: #182C61;
   position: sticky;
@@ -66,22 +82,9 @@ section {
 .product-button:hover {
   background-color: #4cd137;
 }
-@media screen and (max-width: 1023px) {
-  .container {
-    max-width: 80%;
-  }
-  .products {
-    grid-template-columns: repeat(2, 48.5%);
-    column-gap: 3%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .products {
-    display: block;
-  }
-  .product-item {
-    margin-bottom: 32px;
-  }
+.products {
+  grid-template-columns: repeat(2, 48.5%);
+  column-gap: 3%;
 }
 .social-links {
   display: flex;
